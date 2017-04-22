@@ -1,0 +1,17 @@
+<div class="container" >
+  <input type="text" (focus)="inputFocused()" (blur)="inputBlurred()" [(ngModel)]="query" (keyup)="0" />
+  <table *ngIf="showSuggestions">
+    <thead>
+      <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people | textFilter : query">
+        <td>{{person.firstName}}</td>
+        <td>{{person.lastName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>  	

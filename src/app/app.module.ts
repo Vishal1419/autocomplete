@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component';
+import { TextFilterPipe } from './pipes/textFilter.Pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AutoCompleteComponent,
+    TextFilterPipe
   ],
   imports: [
     BrowserModule,
